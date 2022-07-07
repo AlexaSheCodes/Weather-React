@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <p className="Footer">
       <a
-        href="https://github.com/AlexaSheCodes/MyAppWeather"
+        href="https://github.com/AlexaSheCodes/Weather-React"
         className="Footer"
       >
         Open source code
