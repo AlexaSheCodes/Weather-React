@@ -1,17 +1,58 @@
 import React from "react";
-import axios from "axios";
-import { Audio } from "react-loader-spinner";
+import "./Weather.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import background from "./images/galaxy.jpg";
 
-export default function Weather(props) {
-  function showWeather(response) {
-    alert(
-      `The weather in ${response.data.name} is ${Math.round(
-        response.data.main.temp
-      )}`
-    );
-  }
-  let apiKey = "959f16f94f43568286f7341b3d6b31a5";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
-  return <Audio height="100" width="100" color="pink" ariaLabel="loading" />;
+export default function Weather() {
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        padding: "100px",
+      }}
+    >
+      <div class="container">
+        <form id="search-form">
+          <input
+            type="text"
+            placeholder="Enter your city"
+            autocomplete="off"
+            autofocus="on"
+            id="search-text-input"
+          />
+          <input type="submit" value="🔍 Search" />
+          <input type="submit" id="pin" value="📍Current" />
+        </form>
+        <h1 id="h1">Athens</h1>
+        <h2 id="diffentTemp">35 </h2>
+        <h3>
+          {" "}
+          <a href="#" id="celsius-link">
+            {" "}
+            °C{" "}
+          </a>{" "}
+          |{" "}
+          <a href="#" id="fahrenheit-link">
+            {" "}
+            °F{" "}
+          </a>
+        </h3>
+        <ul>
+          <li className="description" id="dayTime">
+            Saturday, 15:38
+          </li>
+          <li className="description" id="temp-description">
+            Sunny ☀️
+          </li>
+          <li className="description" id="wind">
+            Wind 20 km/h
+          </li>
+          <li className="description" id="humidity">
+            Humiduty 38%
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
