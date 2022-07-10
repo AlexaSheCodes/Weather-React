@@ -26,18 +26,7 @@ export default function Weather() {
         </form>
         <h1 id="h1">Athens</h1>
         <h2 id="diffentTemp">35 </h2>
-        <h3>
-          {" "}
-          <a href="#" id="celsius-link">
-            {" "}
-            °C{" "}
-          </a>{" "}
-          |{" "}
-          <a href="#" id="fahrenheit-link">
-            {" "}
-            °F{" "}
-          </a>
-        </h3>
+        <h3> </h3>
         <ul>
           <li className="description" id="dayTime">
             Saturday, 15:38
