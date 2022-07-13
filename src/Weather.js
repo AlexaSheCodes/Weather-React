@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Weather() {
   return (
-    <div>
+    <div className="Weather">
       <div class="container">
         <form id="search-form">
           <input

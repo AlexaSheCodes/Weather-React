@@ -12,7 +12,7 @@ export default function Footer() {
       >
         Alexandra Goilo
       </a>
-      👩‍💻 and is
+      👩‍💻 and is {""}
       <a
         href="https://github.com/AlexaSheCodes/Weather-React"
         target="_blank"
