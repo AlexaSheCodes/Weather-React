@@ -4,13 +4,22 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <p className="Footer">
+      This project was coded by{" "}
+      <a
+        href="https://subtle-malabi-26387a.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Alexandra Goilo
+      </a>
+      👩‍💻 and is
       <a
         href="https://github.com/AlexaSheCodes/Weather-React"
-        className="Footer"
+        target="_blank"
+        rel="noreferrer"
       >
-        Open source code
+        open-sourced on GitHub
       </a>
-      👩‍💻 Coded by Alexandra Goilo
     </p>
   );
 }
