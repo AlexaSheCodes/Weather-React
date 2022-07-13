@@ -1,17 +1,10 @@
 import React from "react";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import background from "./images/galaxy.jpg";
 
 export default function Weather() {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        padding: "100px",
-      }}
-    >
+    <div>
       <div class="container">
         <form id="search-form">
           <input
@@ -24,7 +17,7 @@ export default function Weather() {
           <input type="submit" value="🔍 Search" />
           <input type="submit" id="pin" value="📍Current" />
         </form>
-        <h1 id="h1">Athens</h1>
+        <h1 id="h1">Mykonos</h1>
         <h2 id="diffentTemp">35 </h2>
         <h3> </h3>
         <ul>
