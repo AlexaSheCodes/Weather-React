@@ -13,6 +13,7 @@ body {
 }
 p {
   text-align: center;
+  font-size: 18px;
   display: block;
   margin: 0 auto;
 }
@@ -20,10 +21,11 @@ p {
   display: block;
   border: solid black;
   border-radius: 20px;
-  padding: 30px 50px;
+  padding: 10px 50px;
   width: 800px;
-  margin: 0 auto;
+  margin: 10px auto;
   background: #4c69a1;
+  align-items: center;
 }
 h1 {
   font-family: "Hurricane", cursive;
@@ -73,10 +75,8 @@ a {
 }
 
 .col {
-  color: #006ec5;
-
-  margin: 0 auto;
-  display: block;
+  color: #9eb4e3;
+  display: inline-block;
 }
 
 ul {
@@ -108,21 +108,22 @@ div {
   display: block;
   margin: 0 auto;
 }
-
-#celsius-link p {
-  position: relative;
-  left: -50px;
-  color: black;
-}
-#fahrenheit-link {
-  color: black;
-}
-#temp-description {
-  text-transform: capitalize;
-}
 .Weather canvas {
   color: black;
   position: relative;
   left: 60px;
   top: 40px;
+}
+p {
+  text-align: center;
+}
+#icons {
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+#icon {
+  position: relative;
+  left: -20px;
+  top: 30px;
 }
