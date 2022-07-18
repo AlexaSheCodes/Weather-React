@@ -20,6 +20,14 @@ export default function Footer() {
       >
         open-sourced on GitHub
       </a>
+      {""} and {""}
+      <a
+        href="https://incomparable-scone-4841a9.netlify.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        hosted on Netlify
+      </a>
     </p>
   );
 }
