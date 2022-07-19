@@ -117,13 +117,3 @@ div {
 p {
   text-align: center;
 }
-#icons {
-  position: relative;
-  left: 0px;
-  top: 0px;
-}
-#icon {
-  position: relative;
-  left: -20px;
-  top: 30px;
-}
