@@ -11,13 +11,11 @@ export default function WeatherForecast() {
             <div className="WeatherForecast-day">
               Monday
               <div />
-              <p>
-                <WeatherIcon code="01d" size={32} />
-                <div className="WeatherForecast-temperatures">
-                  <span className="WeatherForecast-temperature-max">35° </span>
-                  <span className="WeatherForecast-temperature-min">15°</span>
-                </div>
-              </p>
+              <WeatherIcon code="01d" size={32} />
+              <div className="WeatherForecast-temperatures">
+                <span className="WeatherForecast-temperature-max">35° </span>
+                <span className="WeatherForecast-temperature-min">15°</span>
+              </div>
             </div>
           </div>
         </div>
