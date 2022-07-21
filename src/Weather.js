@@ -9,9 +9,9 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -22,12 +22,6 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
-    const apiKey = "959f16f94f43568286f7341b3d6b31a5";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     search(city);
@@ -36,7 +30,11 @@ export default function Weather(props) {
   function handleCityChange(event) {
     setCity(event.target.value);
   }
-
+  function search() {
+    const apiKey = "959f16f94f43568286f7341b3d6b31a5";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -46,7 +44,7 @@ export default function Weather(props) {
               type="text"
               placeholder="Enter your city"
               autocomplete="off"
-              autofocus="on"
+              autoFocus="on"
               id="search-text-input"
               onChange={handleCityChange}
             />
@@ -54,7 +52,7 @@ export default function Weather(props) {
             <input type="submit" id="pin" value="📍Current" />
           </form>
           <WeatherInfo data={weatherData} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
