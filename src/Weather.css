@@ -110,6 +110,8 @@ div {
 }
 .Weather canvas {
   color: black;
+}
+.WeatherInfo canvas {
   position: relative;
   left: 60px;
   top: 40px;
